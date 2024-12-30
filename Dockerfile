@@ -6,4 +6,4 @@ RUN chmod +x /app/script.sh
 
 WORKDIR /app
 
-CMD ["script.sh"]
+CMD ["/app/script.sh"]
