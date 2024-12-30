@@ -1,0 +1,8 @@
+services:
+  cron-practice:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    environment:
+      - NAME=${NAME}
+      - GREETING=${GREETING}
