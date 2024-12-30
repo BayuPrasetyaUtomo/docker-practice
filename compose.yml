@@ -7,4 +7,7 @@ services:
       - NAME=${NAME}
       - GREETING=${GREETING}
     volumes:
-      - ./:/app
+      - cron-practice:/app
+      
+volumes:
+  cron-practice
