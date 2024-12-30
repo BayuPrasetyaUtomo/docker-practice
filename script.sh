@@ -1,6 +1,12 @@
 #!/bin/sh
 
-HOST_TIMESTAMP=$(date +%FI_%H-%M-%S)
-SINGAPORE_TIMESTAMP=$(TZ=Asia/Jakarta date +%FI_%H-%M-%S)
+# script.sh
+HOST_TIMESTAMP=$(date)
+TIMESTAMP=$(TZ=Asia/Tokyo date +%Y-%m-%d_%H-%M-%S)
 
-echo "${GREETING} ${NAME}, currently it's ${HOST_TIMESTAMP} in the host timezone and ${SINGAPORE_TIMESTAMP} in Asia/Singapore timezone when this script is running"
+FILENAME="README.md"
+
+# Write the timestamps to README.md
+echo "HOST_TIMESTAMP=$(date) // \`$HOST_TIMESTAMP\`" >> $FILENAME
+echo "TIMESTAMP=$(TZ=Asia/Tokyo date +%Y-%m-%d_%H-%M-%S) // \`$TIMESTAMP\`" >> $FILENAME
+tail -n 6 $FILENAME > $FILENAME.tmp && mv $FILENAME.tmp $FILENAME
