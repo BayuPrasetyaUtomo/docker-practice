@@ -8,6 +8,5 @@ services:
       - GREETING=${GREETING}
     volumes:
       - cron-practice:/app
-
 volumes:
   cron-practice
