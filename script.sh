@@ -1,8 +1,16 @@
-#!/bin/sh
+#!/bin/bash
 
-HOST_TIMESTAMP=$(date +%F %H-%M-%S)
-TIMESTAMP=$(TZ=Asia/Tokyo date +%Y-%m-%d_%H-%M-%S) # Tokyo time: Mon, Dec 30, 2024 12:28:18 PM
+# script.sh
+HOST_TIMESTAMP=$(date)
+TIMESTAMP=$(TZ=Asia/Tokyo date +%Y-%m-%d_%H-%M-%S)
+
+FILENAME="README.md"
 
 echo "${GREETING} ${NAME}"
 echo "Local time: $HOST_TIMESTAMP"
 echo "Tokyo time: $TIMESTAMP"
+
+# Write the timestamps to README.md
+echo "HOST_TIMESTAMP=$(date) // \`$HOST_TIMESTAMP\`" >> $FILENAME
+echo "TIMESTAMP=$(TZ=Asia/Tokyo date +%Y-%m-%d_%H-%M-%S) // \`$TIMESTAMP\`" >> $FILENAME
+tail -n 6 $FILENAME > $FILENAME.tmp && mv $FILENAME.tmp $FILENAME

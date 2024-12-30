@@ -6,5 +6,5 @@ services:
     environment:
       - NAME=${NAME}
       - GREETING=${GREETING}
-    # volumes:
-    #   - ./:/app
+    volumes:
+      - ./:/app
