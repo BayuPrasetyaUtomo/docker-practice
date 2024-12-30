@@ -1,4 +1,5 @@
 #!/bin/sh
 
-echo "$GREETING"
-echo "$NAME"
+TIMESTAMP=$(date +%F_%H-%M-%S)
+
+echo "$GREETING $NAME, currently it's $TIMESTAMP when this script is running"
