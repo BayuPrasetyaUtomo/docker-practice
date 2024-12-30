@@ -5,8 +5,8 @@ COPY crontab /etc/crontabs/root
 
 RUN chmod +x /app/script.sh
 
-RUN apk add --no-cache busybox-suid && \
-    apk add --no-cache nano && \
+RUN apk add --no-cache busybox-suid dos2unix nano && \
+    dos2unix /app/script.sh && \
     crontab /etc/crontabs/root
 
 WORKDIR /app
