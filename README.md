@@ -2,3 +2,5 @@ HOST_TIMESTAMP=$(date) // `Mon, Dec 30, 2024  8:50:31 PM`
 
 TIMESTAMP=$(TZ=Asia/Tokyo date +%Y-%m-%d_%H-%M-%S) // `2024-12-30_13-50-32`
 
+HOST_TIMESTAMP=Mon, Dec 30, 2024 10:29:42 PM // `Mon, Dec 30, 2024 10:29:42 PM`
+TIMESTAMP=2024-12-30_15-29-42 // `2024-12-30_15-29-42`
