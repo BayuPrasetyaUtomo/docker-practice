@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # script.sh
 HOST_TIMESTAMP=$(date)
